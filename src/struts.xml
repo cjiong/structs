@@ -9,7 +9,7 @@
     <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
     
     <include file="config/struts/struts-user.xml"></include>
-    <include file="config/struts/struts-operation.xml"></include>
+    <!--  <include file="config/struts/struts-operation.xml"></include> -->
 
     <package name="sm-default" extends="struts-default">
         <!-- 定义一个拦截器 -->

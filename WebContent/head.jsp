@@ -16,7 +16,7 @@
 	<tr valign="bottom">
 		<td><a href="indexAcion" target="_parent"><font size=5>首页</font></a></td>
 		<td><a href="operation/toAddPage" target="_parent"><font size=5>添加</font></a></td>
-		<td><a href="operation/toModifyPage" target="_parent"><font size=5>修改(删改)</font></a></td>
+		<td><a href="operation/toModifyPage" target="_parent"><font size=5>修改</font></a></td>
 		<td><a href="operation/toSelectPage" target="_parent"><font size=5>查询</font></a></td>
 	</tr>
 </table>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="stuts.i18n.encoding" value="utf-8" />
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+    
+    <include file="config/struts/struts-user.xml"></include>
+    <include file="config/struts/struts-operation.xml"></include>
+
+    <package name="sm-default" extends="struts-default">
+        <!-- 定义一个拦截器 -->
+        <interceptors>
+            <interceptor name="loginInterceptor" class="com.cj.action.interceptor.LoginInterceptor"></interceptor>
+            
+            <!-- 拦截器栈 -->
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="loginInterceptor" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>
+        
+        <default-action-ref name="indexAcion" ><!-- 定义默认action -->
+        </default-action-ref>
+        
+        <global-results><!-- 定义全局Result -->
+            <result name="login">/WEB-INF/user/login.jsp</result>
+        </global-results>
+        
+        
+        <action name="indexAcion" class="com.cj.action.index.IndexAction">
+            <result name="success">/index.jsp</result>
+        </action>
+        
+    </package>
+</struts>
+
+
+

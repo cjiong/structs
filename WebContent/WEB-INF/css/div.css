@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+.article {
+	height: 520px;
+	width: 900px;
+	margin: 16px auto;		/*上边距：16，左右居中*/
+	clear: both;			/*清除浮动*/
+	display: block;			/*显示*/
+}
+.center{
+	align:center;
+	text-align:center;
+	border:0px solid black;
+	width:600px;
+	height:30px
+}
+.center td{
+	border:0px solid black;
+}
+
+#inner {
+	width:1330px;
+	height:700px;
+}
+body {
+	background:images/background.jpg;
+}
+table {
+margin:0 auto;
+text-align: left;
+}

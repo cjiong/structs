@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+<struts>
+    <package name="users" namespace="/user" extends="sm-default">
+    <!-- 跳转页面 -->
+        <action name="toRegisterAction" class="com.cj.action.user.RegisterAction" method="toRegisterPage">
+            <result name="toRegisterPage">/WEB-INF/user/register.jsp</result>
+        </action>
+
+        <action name="toLoginAction" class="com.cj.action.user.LoginAction" method="toLoginPage">
+            <result name="toLoginPage">/WEB-INF/user/login.jsp</result>
+        </action>
+        
+    <!-- 注册、登录、注销 -->
+        <action name="register" class="com.cj.action.user.RegisterAction">
+            <result name="success" type="redirectAction">
+                <param name="namespace">/user</param>
+                <param name="actionname">toLoginAction</param>
+            </result>
+            <result name="error">/WEB-INF/user/registerFailure.jsp</result>
+        </action>
+
+        <action name="login" class="com.cj.action.user.LoginAction">
+            <result name="success" type="redirectAction">
+                <param name="actionName">indexAcion</param>
+            </result>
+            <result name="error">/WEB-INF/user/loginFailure.jsp</result>
+        </action>
+
+        <action name="logout" class="com.cj.action.user.LogoutAction">
+            <result>/WEB-INF/user/login.jsp</result>
+        </action>
+
+    </package>
+
+</struts>

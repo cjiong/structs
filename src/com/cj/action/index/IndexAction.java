@@ -8,6 +8,8 @@ public class IndexAction extends SuperAction {
     
     @Override
     public String execute() {
+    	
+    	System.out.println("yfy");
         return SUCCESS;
     }
 }

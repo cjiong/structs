@@ -8,7 +8,7 @@
 
 <body>
 <center>
-	<img alt="欢迎" src="images/page01.jpg" height="400">
+	<img alt="学生信息管理系统" src="images/page01.jpg" height="400">
 </center>
 </body>
 </html>

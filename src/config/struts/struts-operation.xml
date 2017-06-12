@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="operation" namespace="/operation" extends="sm-default">
+    <!-- 跳转页面 -->
+        <action name="toAddPage" class="com.cj.action.operation.AddStudentAction" method="toAddPage">
+            <result name="toAddPage">/WEB-INF/operation/addStudent.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+        <action name="toSelectPage" class="com.cj.action.operation.SelectStudentAction" method="toSelectPage">
+            <result name="toSelectPage">/WEB-INF/operation/selectStudent.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+
+        <action name="toEditPage" class="com.cj.action.operation.SelectStudentAction" method="selectAllStudent">
+            <result name="success">/WEB-INF/operation/editStudent.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+        <action name="toUpdatePage" class="com.cj.action.operation.UpdateStudentAction" method="toUpdatePage">
+            <result name="toUpdatePage">/WEB-INF/operation/updateStudent.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+    <!-- 操作Action -->
+        <action name="addAction" class="com.cj.action.operation.AddStudentAction">
+            <result name="success">/WEB-INF/operation/addStudentSuccess.jsp</result>
+            <result name="error">/WEB-INF/operation/addStudentFailure.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+        <action name="selectAction" class="com.cj.action.operation.SelectStudentAction">
+            <result name="success">/WEB-INF/operation/selectStudent.jsp</result>
+            <result name="error">/WEB-INF/operation/selectStudentFailure.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+        <action name="deleteAction" class="com.cj.action.operation.DeleteStudentAction">
+            <result name="success">/WEB-INF/operation/deleteStudentSuccess.jsp</result>
+            <result name="error">/WEB-INF/operation/deleteStudentFailure.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+        <action name="updateAction" class="com.cj.action.operation.UpdateStudentAction">
+            <result name="success">/WEB-INF/operation/updateStudentSuccess.jsp</result>
+            <result name="error">/WEB-INF/operation/updateStudentFailure.jsp</result>
+            <interceptor-ref name="loginStack" />
+        </action>
+        
+    </package>
+</struts>

@@ -10,7 +10,7 @@ public class StudentDao extends SuperDao {
 
 	public boolean addStudent(Student student) {
         StringBuffer sql = new StringBuffer();
-        sql.append(" insert into Student (message_number,message_name,message_sex,message_birthday,message_department)"
+        sql.append(" insert into Student (studentNumber,studentName,studentSex,studentBirthday,studentDepartment)"
                 + " values (?,?,?,?,?)");
         try {
             ps = connnection.prepareStatement(sql.toString());

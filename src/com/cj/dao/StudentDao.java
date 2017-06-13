@@ -107,7 +107,7 @@ public class StudentDao extends SuperDao {
     
     public List<Student> selectStudent() {
         StringBuffer sql = new StringBuffer();
-        sql.append("select * from messages");
+        sql.append("select * from Student");
         List<Student> studentList = new ArrayList<Student>();
         try {
             ps = connnection.prepareStatement(sql.toString());

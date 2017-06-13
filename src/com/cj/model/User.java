@@ -17,5 +17,10 @@ public class User {
 	public void setUserpassword(String userpassword) {
 		this.userpassword = userpassword;
 	}
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", userpassword=" + userpassword + "]";
+	}
+	
 	
 }

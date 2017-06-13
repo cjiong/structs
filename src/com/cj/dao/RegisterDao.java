@@ -9,7 +9,7 @@ public class RegisterDao extends SuperDao {
 	public boolean writeStudent(User user) {
         if(!existUser(user.getUsername())) {
             StringBuffer sql = new StringBuffer();
-            sql.append("insert into User (username, userpassword) values (?,?)");
+            sql.append("insert into user (username, userpassword) values (?, ?)");
             try {
                 ps = connnection.prepareStatement(sql.toString());
                 ps.setString(1, user.getUsername());
@@ -34,7 +34,7 @@ public class RegisterDao extends SuperDao {
  
     public boolean existUser(String username) {
         StringBuffer sql = new StringBuffer();
-        sql.append("select username from User where username = ?");
+        sql.append("select username from user where username = ?");
         try {
             ps = connnection.prepareStatement(sql.toString());
             ps.setString(1, username);

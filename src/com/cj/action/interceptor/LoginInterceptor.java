@@ -17,13 +17,13 @@ public class LoginInterceptor extends AbstractInterceptor {
 		ActionContext ctx = invocation.getInvocationContext();  
         Map<String, Object> session = ctx.getSession();
         
-    String user = (String) session.get(Constants.USER_SESSION);
+    String user1 = (String) session.get(Constants.USER_SESSION);
         
-        if ((user != null) && (!user.equals(""))) {
+        if ((user1 != null) && (!user1.equals(""))) {
             return invocation.invoke();
         }
         
-        ctx.put("tip", "");
+        ctx.put("tip", "cwu");
         return Action.LOGIN;
 	}
 

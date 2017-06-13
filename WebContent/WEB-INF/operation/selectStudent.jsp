@@ -13,17 +13,17 @@
 <center><br>
 <form action="operation/selectAction" method="post">
     输入学生学号<input type="text" name="number">
-    <input type="submit" value="Submit">
-    <input type="reset" value="reset">
+    <input type="submit" value="查找">
+    <input type="reset" value="清空">
 </form>
 
 <table border="1">
 	<tr>
-	    <td>学生.学号</td>
-	    <td>学生.姓名</td>
-	    <td>学生.性别</td>
-	    <td>学生.生日</td>
-	    <td>学生.学院</td>
+	    <td>学生学号</td>
+	    <td>学生姓名</td>
+	    <td>学生性别</td>
+	    <td>学生生日</td>
+	    <td>学生学院</td>
 	</tr>
 	<s:iterator var="selectList" value="#request.selectList" status="status">
 	<tr>
@@ -37,6 +37,5 @@
 </table> 
 
 </center>
-<s:debug />
 </body>
 </html>

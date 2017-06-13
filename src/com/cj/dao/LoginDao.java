@@ -7,8 +7,9 @@ import com.cj.model.User;
 public class LoginDao extends SuperDao{
 
 	public boolean checkLegal(User user) {
+		System.out.println(user);
         StringBuffer sql = new StringBuffer();
-        sql.append("select * from User where username = ? and userpassword = ?");
+        sql.append("select * from user where username = ? and userpassword = ?");
         try {
             ps = connnection.prepareStatement(sql.toString());
             ps.setString(1, user.getUsername());

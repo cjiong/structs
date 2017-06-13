@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
@@ -19,8 +19,8 @@
 <form action="user/login" method="post">
 	用户名:<input type="text" name="user.username"><br>
 	密码:<input type="text" name="user.userpassword"><br>
-	<input type="submit" value="Submit">
-	<input type="button" value="Register" onclick="window.location.href='user/toRegisterAction'">
+	<input type="submit" value="提交">
+	<input type="button" value="注册" onclick="window.location.href='user/toRegisterAction'">
 </form>
 </center>    
 </body>

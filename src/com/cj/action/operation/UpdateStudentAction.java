@@ -25,8 +25,8 @@ public class UpdateStudentAction extends SuperAction{
     
     public String toUpdatePage() {
         List<Student> selectList = new StudentDao().selectStudent(number);
-        Student message = selectList.get(0);
-        mapRequest.put("selectOne", message);
+        Student student = selectList.get(0);
+        mapRequest.put("selectOne", student);
         return "toUpdatePage";
     }
 

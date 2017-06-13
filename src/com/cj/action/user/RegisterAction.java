@@ -29,7 +29,7 @@ public class RegisterAction extends SuperAction {
     public User getUser() {
         return user;
     }
-    public void setAccount(User user) {
+    public void setUser(User user) {
         this.user = user;
     }
 }

@@ -18,7 +18,7 @@
         <action name="register" class="com.cj.action.user.RegisterAction">
             <result name="success" type="redirectAction">
                 <param name="namespace">/user</param>
-                <param name="actionname">toLoginAction</param>
+                <param name="actionName">toLoginAction</param>
             </result>
             <result name="error">/WEB-INF/user/registerFailure.jsp</result>
         </action>
